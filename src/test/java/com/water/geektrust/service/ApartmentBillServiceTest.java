@@ -24,8 +24,6 @@ public class ApartmentBillServiceTest {
     @DisplayName("should Generate Bill For Apartment")
     public void shouldGenerateBillForApartments(){
         //Arrange
-        String corporationIsToBoreWellRatio="1:2";
-        Apartment expectedApartment = new Apartment(2, corporationIsToBoreWellRatio);
         GenerateBillDto generatedBillDtoExpected=new GenerateBillDto(900,1200);
         when(apartmentBillServiceMock.calculateBill()).thenReturn(generatedBillDtoExpected);
 
